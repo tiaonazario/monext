@@ -1,63 +1,60 @@
 {
-	"$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
+	"$schema": "https://biomejs.dev/schemas/1.7.3/schema.json",
 	"organizeImports": {
 		"enabled": true
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "single",
-			"arrowParentheses": "asNeeded",
-			"semicolons": "asNeeded",
-			"indentStyle": "space",
-			"indentWidth": 2
-		}
-	},
-	"files": {
-		"ignoreUnknown": true,
-		"ignore": [
-			".next",
-			"node_modules/**",
-			"**/*.json",
-			"**/dist",
-			"**/out",
-			"**/.next",
-			"public/**/*.js"
-		]
 	},
 	"linter": {
 		"enabled": true,
 		"rules": {
 			"recommended": true,
-			"complexity": {
-				"noUselessFragments": "warn"
-			},
-			"correctness": {
-				"useExhaustiveDependencies": "warn"
-			},
-			"suspicious": {
-				"noExplicitAny": "warn"
-			},
 			"a11y": {
 				"noSvgWithoutTitle": "off"
 			},
+			"correctness": {
+				"noUnusedImports": "error",
+				"noUnusedVariables": "error"
+			},
 			"nursery": {
 				"useSortedClasses": {
+					"level": "warn",
 					"options": {
 						"attributes": ["classList"],
 						"functions": ["clsx", "cva", "tw", "tv"]
 					}
 				}
 			}
-		}
+		},
+		"ignore": [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/build/**",
+			"**/.next/**",
+			"**/.turbo/**",
+			"**/.github/**"
+		]
 	},
 	"formatter": {
 		"enabled": true,
+		"formatWithErrors": false,
+		"indentStyle": "space",
+		"indentWidth": 2,
+		"lineEnding": "lf",
+		"lineWidth": 80,
 		"ignore": [
-			"node_modules/*",
-			"*.config.*",
-			"*.json",
-			"tsconfig.json",
-			".turbo"
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/build/**",
+			"**/.next/**",
+			"**/.turbo/**",
+			"**/.github/**"
 		]
+	},
+	"javascript": {
+		"formatter": {
+			"arrowParentheses": "always",
+			"quoteStyle": "single",
+			"quoteProperties": "preserve",
+			"semicolons": "asNeeded"
+		}
 	}
 }
