@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 
-const config: Omit<Config, 'content'> = {
+const config: Config = {
+  content: ['./src/**/*.tsx'],
+  darkMode: ['class'],
   theme: {
     fontSize: {
       xxs: ['0.625rem', '1.25rem'],
@@ -16,10 +18,35 @@ const config: Omit<Config, 'content'> = {
       '6xl': ['4rem', '4rem'],
     },
     lineHeight: {
-      none: 1,
-      tight: 1.25,
-      short: 1.4,
-      base: 1.6,
+      none: '1',
+      tight: '1.25',
+      short: '1.4',
+      base: '1.6',
+    },
+    colors: {
+      background: 'hsl(var(--background))',
+      foreground: 'hsl(var(--foreground))',
+      primary: {
+        DEFAULT: 'hsl(var(--primary))',
+        foreground: 'hsl(var(--primary-foreground))',
+      },
+      secondary: {
+        DEFAULT: 'hsl(var(--secondary))',
+        foreground: 'hsl(var(--secondary-foreground))',
+      },
+      muted: {
+        DEFAULT: 'hsl(var(--muted))',
+        foreground: 'hsl(var(--muted-foreground))',
+      },
+      accent: {
+        DEFAULT: 'hsl(var(--accent))',
+        foreground: 'hsl(var(--accent-foreground))',
+      },
+      destructive: {
+        DEFAULT: 'hsl(var(--destructive))',
+        foreground: 'hsl(var(--destructive-foreground))',
+      },
+      border: 'hsl(var(--border))',
     },
     extend: {
       fontFamily: {
@@ -27,9 +54,23 @@ const config: Omit<Config, 'content'> = {
         sans: ['Inter', 'sans-serif'],
         mono: ['JetBrains Mono', 'monospace'],
       },
+      keyframes: {
+        'accordion-down': {
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
+        },
+        'accordion-up': {
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
+        },
+      },
+      animation: {
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 }
 
 export default config

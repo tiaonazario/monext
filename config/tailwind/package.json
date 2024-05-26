@@ -1,12 +1,15 @@
 {
   "name": "@monext/tailwind-config",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "exports": {
-    ".": "./tailwind.config.ts"
+    ".": "./tailwind.config.ts",
+    "./styles.css": "./styles.css"
   },
   "devDependencies": {
     "@monext/typescript-config": "workspace:*",
-    "tailwindcss": "^3.4.3"
+    "@types/node": "^20.12.12",
+    "tailwindcss": "^3.4.3",
+    "tailwindcss-animate": "^1.0.7"
   }
 }
