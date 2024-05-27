@@ -1,7 +1,6 @@
 import type { Config } from 'tailwindcss'
 
-const config: Config = {
-  content: ['./src/**/*.tsx'],
+const config: Omit<Config, 'content'> = {
   darkMode: ['class'],
   theme: {
     fontSize: {
@@ -23,32 +22,36 @@ const config: Config = {
       short: '1.4',
       base: '1.6',
     },
-    colors: {
-      background: 'hsl(var(--background))',
-      foreground: 'hsl(var(--foreground))',
-      primary: {
-        DEFAULT: 'hsl(var(--primary))',
-        foreground: 'hsl(var(--primary-foreground))',
-      },
-      secondary: {
-        DEFAULT: 'hsl(var(--secondary))',
-        foreground: 'hsl(var(--secondary-foreground))',
-      },
-      muted: {
-        DEFAULT: 'hsl(var(--muted))',
-        foreground: 'hsl(var(--muted-foreground))',
-      },
-      accent: {
-        DEFAULT: 'hsl(var(--accent))',
-        foreground: 'hsl(var(--accent-foreground))',
-      },
-      destructive: {
-        DEFAULT: 'hsl(var(--destructive))',
-        foreground: 'hsl(var(--destructive-foreground))',
-      },
-      border: 'hsl(var(--border))',
-    },
     extend: {
+      colors: {
+        teste: '#112345',
+        background: {
+          DEFAULT: 'hsl(var(--background))',
+          alt: 'hsl(var(--background-alt))',
+        },
+        foreground: 'hsl(var(--foreground))',
+        primary: {
+          DEFAULT: 'hsl(var(--primary))',
+          foreground: 'hsl(var(--primary-foreground))',
+        },
+        secondary: {
+          DEFAULT: 'hsl(var(--secondary))',
+          foreground: 'hsl(var(--secondary-foreground))',
+        },
+        muted: {
+          DEFAULT: 'hsl(var(--muted))',
+          foreground: 'hsl(var(--muted-foreground))',
+        },
+        accent: {
+          DEFAULT: 'hsl(var(--accent))',
+          foreground: 'hsl(var(--accent-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
+        border: 'hsl(var(--border))',
+      },
       fontFamily: {
         brand: ['Merriweather', 'serif'],
         sans: ['Inter', 'sans-serif'],

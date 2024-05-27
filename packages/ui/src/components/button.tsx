@@ -8,14 +8,17 @@ const buttonVariants = tv({
   base: 'inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary',
   variants: {
     variant: {
-      primary: 'bg-primary text-primary-foreground hover:bg-primary/90',
-      secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/90',
-      outline: 'border hover:bg-accent hover:text-accent-foreground',
+      primary: 'bg-primary text-primary-foreground shadow hover:bg-primary/90',
+      secondary:
+        'bg-secondary text-secondary-foreground shadow hover:bg-secondary/90',
+      outline: 'border shadow hover:bg-accent hover:text-accent-foreground',
+      ghost:
+        'bg-transparent shadow-sm hover:bg-accent hover:text-accent-foreground',
     },
     size: {
-      sm: 'h-8 gap-1 px-2 py-1 text-xs shadow-sm',
-      base: 'h-10 gap-2 px-4 py-2 text-sm shadow',
-      md: 'h-13 gap-3 px-6 py-3 text-base shadow-md',
+      sm: 'h-8 gap-1 px-2 py-1 text-xs',
+      base: 'h-10 gap-2 px-4 py-2 text-sm',
+      md: 'h-13 gap-3 px-6 py-3 text-base',
     },
   },
 })

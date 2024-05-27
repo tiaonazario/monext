@@ -1,5 +1,10 @@
 import { cn } from '@monext/ui/utils'
 import '../styles/globals.css'
+import { BottomBar } from '@/components/bottom-bar'
+import { Header } from '@/components/header'
+import { Providers } from '@/components/providers'
+import { SidebarMenu } from '@/components/sidebar-menu'
+import { SidebarMenuButton } from '@/components/sidebar-menu-button'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 
@@ -25,11 +30,23 @@ export default function RootLayout({
       <body
         className={cn(
           fontSans.className,
-          'h-screen w-screen bg-background antialiased',
+          'flex h-screen w-screen flex-col bg-background text-sm antialiased',
         )}
         suppressHydrationWarning
       >
-        {children}
+        <Providers>
+          <Header />
+
+          <main className="flex grow">
+            <SidebarMenuButton>
+              <SidebarMenu />
+            </SidebarMenuButton>
+
+            <div className="grow">{children}</div>
+          </main>
+
+          <BottomBar />
+        </Providers>
       </body>
     </html>
   )
