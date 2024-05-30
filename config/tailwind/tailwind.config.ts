@@ -1,7 +1,8 @@
 import type { Config } from 'tailwindcss'
+import tailwindcssAnimate from 'tailwindcss-animate'
 
+// We want each package to be responsible for its own content.
 const config: Omit<Config, 'content'> = {
-  darkMode: ['class'],
   theme: {
     fontSize: {
       xxs: ['0.625rem', '1.25rem'],
@@ -16,15 +17,14 @@ const config: Omit<Config, 'content'> = {
       '5xl': ['3rem', '3rem'],
       '6xl': ['4rem', '4rem'],
     },
-    lineHeight: {
-      none: '1',
-      tight: '1.25',
-      short: '1.4',
-      base: '1.6',
-    },
     extend: {
+      spacing: {
+        '4.5': '1.125rem',
+      },
       colors: {
-        teste: '#112345',
+        border: 'hsl(var(--border))',
+        input: 'hsl(var(--input))',
+        ring: 'hsl(var(--ring))',
         background: {
           DEFAULT: 'hsl(var(--background))',
           alt: 'hsl(var(--background-alt))',
@@ -38,6 +38,14 @@ const config: Omit<Config, 'content'> = {
           DEFAULT: 'hsl(var(--secondary))',
           foreground: 'hsl(var(--secondary-foreground))',
         },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))',
+        },
+        destructive: {
+          DEFAULT: 'hsl(var(--destructive))',
+          foreground: 'hsl(var(--destructive-foreground))',
+        },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))',
@@ -46,16 +54,35 @@ const config: Omit<Config, 'content'> = {
           DEFAULT: 'hsl(var(--accent))',
           foreground: 'hsl(var(--accent-foreground))',
         },
-        destructive: {
-          DEFAULT: 'hsl(var(--destructive))',
-          foreground: 'hsl(var(--destructive-foreground))',
+        popover: {
+          DEFAULT: 'hsl(var(--popover))',
+          foreground: 'hsl(var(--popover-foreground))',
         },
-        border: 'hsl(var(--border))',
+        card: {
+          DEFAULT: 'hsl(var(--card))',
+          foreground: 'hsl(var(--card-foreground))',
+        },
+        'thread-category': {
+          DEFAULT: '#86EFAC',
+          comment: '#BAD9A2',
+          remove: '#9a031e',
+          spelling: '#FF5733',
+          grammar: '#FFA233',
+          punctuation: '#F0C419',
+          coherence: '#2ECC71',
+          cohesion: '#F25C05',
+          vagueness: '#3498DB',
+          redundancy: '#9B59B6',
+          ambiguity: '#E91E63',
+          clarity: '#00B5AD',
+          genre: '#3F51B5',
+          theme: '#00BCD4',
+        },
       },
-      fontFamily: {
-        brand: ['Merriweather', 'serif'],
-        sans: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+      borderRadius: {
+        lg: 'var(--radius)',
+        md: 'calc(var(--radius) - 2px)',
+        sm: 'calc(var(--radius) - 4px)',
       },
       keyframes: {
         'accordion-down': {
@@ -73,7 +100,6 @@ const config: Omit<Config, 'content'> = {
       },
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [tailwindcssAnimate],
 }
-
 export default config

@@ -1,8 +1,6 @@
+import { type VariantProps, cn, tv } from '@monext/utils'
 import { Slot } from '@radix-ui/react-slot'
 import * as React from 'react'
-import { type VariantProps, tv } from 'tailwind-variants'
-
-import { cn } from '../cn'
 
 const buttonVariants = tv({
   base: 'inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary',

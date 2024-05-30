@@ -1,4 +1,4 @@
-import { cn } from '@monext/ui/utils'
+import { cn } from '@monext/utils'
 import type { HTMLAttributes } from 'react'
 
 export interface PageTitleProps extends HTMLAttributes<HTMLDivElement> {

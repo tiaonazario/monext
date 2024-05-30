@@ -1,4 +1,4 @@
-import { cn } from '@monext/ui/utils'
+import { cn } from '@monext/utils'
 import { Slot } from '@radix-ui/react-slot'
 import * as React from 'react'
 

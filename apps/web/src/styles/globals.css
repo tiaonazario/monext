@@ -1,62 +1,9 @@
 @import '@monext/ui/styles.css';
+@import '@monext/ui/shared_styles.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 60, 9%, 98%; /* 50 */
-    --background-alt: 60, 5%, 96%; /* 100 */
-    --foreground: 12, 6%, 15%; /* 800 */
-
-    --primary: 21, 90%, 48%;
-    --primary-foreground: 33, 100%, 96%;
-
-    --secondary: 20, 6%, 90%; /* 200 */
-    --secondary-foreground: 20, 14%, 4%; /* 950 */
-
-    --muted: 20, 6%, 90%; /* 200 */
-    --muted-foreground: 25 5% 45%; /* 500 */
-
-    --accent: 20, 6%, 90%; /* 200 */
-    --accent-foreground: 20, 14%, 4%; /* 950 */
-
-    --success: 142.1 70.6% 45.3%; /* green 500 */
-    --success-foreground: 144.9 80.4% 10%; /* green 50 */
-
-    --destructive: 0 72.2% 50.6%; /* red 500 */
-    --destructive-foreground: 60, 9%, 98%; /* red 50 */
-
-    --border: 20, 6%, 90%; /* 200 */
-  }
-
-  .dark {
-    --background: 20, 14%, 4%; /* 950 */
-    --background-alt: 24, 10%, 10%; /* 900 */
-    --foreground: 60, 9%, 98%; /* 50 */
-
-    --primary: 21, 90%, 48%;
-    --primary-foreground: 33, 100%, 96%;
-
-    --secondary: 12, 6%, 15%; /* 800 */
-    --secondary-foreground: 60, 9%, 98%; /* 50 */
-
-    --muted: 12, 6%, 15%; /* 800 */
-    --muted-foreground: 24, 5%, 64%; /* 400 */
-
-    --accent: 12, 6%, 15%; /* 800 */
-    --accent-foreground: 60, 9%, 98%; /* 50 */
-
-    --success: 142.1 70.6% 45.3%; /* green 500 */
-    --success-foreground: 144.9 80.4% 10%; /* green 50 */
-
-    --destructive: 0 72.2% 50.6%; /* red 500 */
-    --destructive-foreground: 60, 9%, 98%; /* red 50 */
-
-    --border: 12, 6%, 15%; /* 800 */
-  }
-}
 
 @layer base {
   * {

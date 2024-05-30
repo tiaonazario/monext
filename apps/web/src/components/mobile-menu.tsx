@@ -1,6 +1,6 @@
 'use client'
 
-import { cn } from '@monext/ui/utils'
+import { cn } from '@monext/utils'
 import Link, { type LinkProps } from 'next/link'
 import { usePathname } from 'next/navigation'
 import type { ElementType, ReactNode } from 'react'

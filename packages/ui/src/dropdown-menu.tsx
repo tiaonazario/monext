@@ -1,9 +1,8 @@
 'use client'
 
+import { cn } from '@monext/utils'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import * as React from 'react'
-
-import { cn } from '../cn'
 
 const Root = DropdownMenu.Root
 

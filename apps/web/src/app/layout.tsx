@@ -1,16 +1,16 @@
-import { cn } from '@monext/ui/utils'
 import '../styles/globals.css'
+
 import { BottomBar } from '@/components/bottom-bar'
 import { Header } from '@/components/header'
 import { Providers } from '@/components/providers'
 import { SidebarMenu } from '@/components/sidebar-menu'
 import { SidebarMenuButton } from '@/components/sidebar-menu-button'
+import { cn } from '@monext/utils'
 import type { Metadata } from 'next'
 import { Inter as FontSans } from 'next/font/google'
 
 const fontSans = FontSans({
   subsets: ['latin'],
-  variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
